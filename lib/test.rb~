@@ -1,0 +1,7 @@
+require './fun_with_strings'
+num = 9 / 2
+puts num
+str1 = "redivider"
+str2 = "tuut"
+puts str.palindrome?
+puts str2.palindrome?

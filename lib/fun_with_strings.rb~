@@ -8,8 +8,8 @@ module FunWithStrings
 	if(self.length % 2 == 0)
 		puts "#{self} Is even"
 		puts self[0, self.length/2]
-		puts self[self.length/2, self.length].reverse
-		if(self[0, self.length/2] == self[self.length/2, self.length].reverse)
+		
+		if(self[0, self.length/2] == self[self.length/2, self.length])
 			return true
 		else
 			return false
@@ -18,7 +18,7 @@ module FunWithStrings
 		puts "#{self} Is odd"
 		puts self[0, self.length/2]
 		puts self[self.length/2 + 1, self.length]
-		if(self[0, self.length/2] == self[self.length/2 + 1, self.length].reverse)
+		if(self[0, self.length/2] == self[self.length/2 + 1, self.length])
 			return true
 		else
 			return false
