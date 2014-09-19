@@ -2,23 +2,23 @@ module FunWithStrings
   def palindrome?
 	
 	self.downcase!
-	self.gsub(/[!@$%,;:]/, "")
+	str = self.gsub(/[^0-9A-Za-z]/, "")
 	puts "Start Palindrome"
 	#Testing for even
-	if(self.length % 2 == 0)
-		puts "#{self} Is even"
-		puts self[0, self.length/2]
-		puts self[self.length/2, self.length].reverse
-		if(self[0, self.length/2] == self[self.length/2, self.length].reverse)
+	if(str.length % 2 == 0)
+		puts "#{str} Is even"
+		puts str[0, str.length/2]
+		puts str[str.length/2, str.length].reverse
+		if(str[0, str.length/2] == str[str.length/2, str.length].reverse)
 			return true
 		else
 			return false
 		end
 	else
-		puts "#{self} Is odd"
-		puts self[0, self.length/2]
-		puts self[self.length/2 + 1, self.length]
-		if(self[0, self.length/2] == self[self.length/2 + 1, self.length].reverse)
+		puts "#{str} Is odd"
+		puts str[0, str.length/2]
+		puts str[str.length/2 + 1, str.length]
+		if(str[0, str.length/2] == str[str.length/2 + 1, str.length].reverse)
 			return true
 		else
 			return false
