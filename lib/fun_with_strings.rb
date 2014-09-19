@@ -1,7 +1,8 @@
 module FunWithStrings
   def palindrome?
-	
+	#Downcasing the string
 	self.downcase!
+	#Getting rid of special characters using regex
 	str = self.gsub(/[^0-9A-Za-z]/, "")
 	puts "Start Palindrome"
 	#Testing for even
@@ -15,6 +16,7 @@ module FunWithStrings
 			return false
 		end
 	else
+		#Testing for odd
 		puts "#{str} Is odd"
 		puts str[0, str.length/2]
 		puts str[str.length/2 + 1, str.length]
@@ -27,7 +29,14 @@ module FunWithStrings
   end
 
   def count_words
-    # your code here
+	self.downcase!
+	str = self.gsub(/[^0-9A-Za-z]/, " ")
+	words = str.split(" ")
+	word_hash = Hash.new(0)
+	words.each {|k, v| word_hash[k] += 1}
+	puts word_hash.inspect
+	return word_hash
+	
   end
 
   def anagram_groups
