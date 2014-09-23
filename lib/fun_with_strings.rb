@@ -40,7 +40,10 @@ module FunWithStrings
   end
 
   def anagram_groups
-    # your code here
+    return [] if self.empty?
+    
+    anagrams = self.split(" ")
+    anagrams.group_by {|word| word.downcase.chars.sort}.values
   end
 end
 
